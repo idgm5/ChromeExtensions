@@ -1,0 +1,23 @@
+{
+    "manifest_version": 2,
+
+    "name": "Tasty",
+    "description": "Import ingredients from a tasty page to create a shopping list",
+    "version": "1.0",
+    "icons": {
+       "16": "imgs/tasty-16x16.png",
+       "32": "imgs/tasty-32x32.png",
+       "48": "imgs/tasty-48x48.png",
+       "128": "imgs/tasty-128x128.png"
+     },
+   "browser_action": {
+    "default_popup": "popup.html"
+    },
+    "content_scripts": [
+       {
+           "matches": ["https://tasty.co/recipe/*"],
+           "js": ["contentScript.js"]
+       }
+   ],
+    "permissions": ["tabs"]
+}
